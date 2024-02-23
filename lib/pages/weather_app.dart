@@ -18,6 +18,7 @@ class _WeatherPage extends State<WeatherPage> {
     //get the current city
     String cityName = await _weatherService.getCurrenCity();
     //get weather for  city
+
     try {
       final weather = await _weatherService.getweather(cityName);
       setState(() {
@@ -48,7 +49,7 @@ class _WeatherPage extends State<WeatherPage> {
       case 'clear':
         return 'assets/sunny.json';
       default:
-        return 'assets/sunny.gson';
+        return 'assets/sunny.json';
     }
   }
 
@@ -61,7 +62,7 @@ class _WeatherPage extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[800],
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
